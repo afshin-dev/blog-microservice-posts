@@ -4,3 +4,7 @@
 
     - [Project name]-[Project type]-[Service name]
     - [blog][microservice][posts]
+
+## compile typscript files (npm)
+
+    - npm run ts
