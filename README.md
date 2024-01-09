@@ -7,6 +7,8 @@
 
 ## compile typscript files (npm
 
-'''bash
+- ```bash
+
     npm run ts
-'''
+
+```
