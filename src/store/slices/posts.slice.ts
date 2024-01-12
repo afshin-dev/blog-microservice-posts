@@ -32,5 +32,17 @@ const posts = createSlice({
 });
 
 export const { addPost } = posts.actions;
-export const selectPosts = (state: RootState) => state.posts.entities;
+export const selectPosts: (state: RootState) => Post[] = (state: RootState) =>
+  state.posts.entities;
+
+export const selectSinglePost: (
+  postId: string
+) => (state: RootState) => Post | null =
+  (postId: string) => (state: RootState) => {
+    if (postId) {
+      return state.posts.entities.find((p) => p?.id === postId) || null;
+    } else {
+      return null;
+    }
+  };
 export default posts.reducer;
