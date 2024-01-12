@@ -24,5 +24,5 @@ posts.post("", (req, res) => {
 
   store.dispatch(addPost(post));
 
-  res.redirect("/posts");
+  return res.json(selectPosts(store.getState()));
 });
